@@ -1,0 +1,27 @@
+﻿body
+{
+    background: #454547;
+    padding:0px;
+    margin:0px;
+}
+
+img[alt='pac.me']
+{
+    position: absolute;
+    width: 40%;
+    max-width: 360px;
+    min-width: 240px;
+    max-height: 260px;
+    min-height: 140px;
+}
+
+#demo
+{
+    display: block;
+    position: absolute;
+    margin:auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

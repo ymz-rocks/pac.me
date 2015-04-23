@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>pac.me</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=7" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta http-equiv="X-UA-Compatible" content="IE=7" /><script type="text/javascript" src="js/excanvas.compiled.js"></script><![endif]-->
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="js/pac.me.1.0.js"></script>
+    <script src="js/pac.me.clock.js"></script>
+    <script>
+
+        new Pac('demo', function (me)
+        {
+            me.scale(0.8).load('clock', { colors: { hours: '#757577', seconds: '#2997f2' } }).play();
+        });
+
+
+    </script>
+</head>
+<body>
+    <img src="img/pac.me.png" alt="pac.me" />
+    <canvas id="demo" width="360" height="360"></canvas>
+</body>
+</html>
+

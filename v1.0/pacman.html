@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>pac.me</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=7" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta http-equiv="X-UA-Compatible" content="IE=7" /><script type="text/javascript" src="js/excanvas.compiled.js"></script><![endif]-->
+    <script src="js/pac.me.1.0.js"></script>
+    <script>
+
+        Pac('pacman', function (props, me, delegate)
+        {
+            var val = (props.val) ? props.val : props.space, half = val / 2, start = 0.25 - half, end = 0.25 + half;
+
+            props.main.start = end; props.main.end = start;
+
+            me.draw.pie(props.main).pie({ x: 115, y: 45, r: 5, border: { size: 15, color: '#333' }, back: { color: '#333' } });
+
+            props.val = val + 0.01 * ((props.up) ? 1 : -1);
+
+            delegate(props.val); // post your output here :)
+
+            if (props.val < 0)
+            {
+                props.val = 0.01;
+                props.up = true;
+            }
+            else if (props.val > props.space)
+            {
+                props.val = props.space;
+                props.up = false;
+            }
+
+        }, { space: 0.2, main: { r: 100, border: { size: 10, color: '#333' }, back: { color: '#ffD670' } } });
+
+        var pac = new Pac('demo', function (me)
+        {
+            me.speed(2).scale(1.4).load('pacman', function (data)
+            {
+                //console.log(data); // test the output
+
+            }).play();
+
+        });
+    </script>
+</head>
+<body onclick="pac.toggle()">
+    <img src="img/pac.me.png" alt="pac.me" />
+    <canvas id="demo" width="210" height="210"></canvas>
+</body>
+</html>

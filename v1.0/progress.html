@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>pac.me</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=7" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta http-equiv="X-UA-Compatible" content="IE=7" /><script type="text/javascript" src="js/excanvas.compiled.js"></script><![endif]-->
+    <script src="js/pac.me.1.0.js"></script>
+    <script>
+
+        new Pac('demo', function (me)
+        {
+            me.play(function (props)
+            {
+                me.interval(4).scale(3);
+
+                props.circle.end = 1; props.circle.border.color = '#535355'; me.draw.pie(props.circle);
+                props.circle.end = props.progress; props.circle.border.color = '#29b6f6'; me.draw.pie(props.circle);
+
+                props.progress += 0.001; if (props.progress > 1) props.progress = 0;
+
+
+            }, { progress: 0, circle: { r: 40, border: { size: 20 }, back: { color: 'transparent' } } });
+        });
+
+    </script>
+</head>
+<body>
+    <img src="img/pac.me.png" alt="pac.me" />
+    <canvas id="demo" width="100" height="100"></canvas>
+</body>
+</html>

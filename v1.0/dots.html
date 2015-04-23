@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>pac.me</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <style>
+        canvas#demo
+        {
+            border: 10px solid #535355;
+            background: #3e3e41;
+        }
+    </style>
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=7" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta http-equiv="X-UA-Compatible" content="IE=7" /><script type="text/javascript" src="js/excanvas.compiled.js"></script><![endif]-->
+    <script src="js/pac.me.1.0.js"></script>
+    <script>
+
+        Pac('dot', function (props, me)
+        {
+            if (props.y == 0 || props.y > me.canvas.y + props.size)
+            {
+                props.size = me.random(5, 90); props.x = me.random(-20, 240);
+
+                props.y = -props.size; props.rate = me.random(1, 5);
+
+                props.alpha = me.random(80, 90) * 0.01;
+
+                props.direction = me.random(-1, 1) * me.random(0, 3);
+            }
+
+            me.draw.pie({ x: props.x, y: props.y - props.size, r: props.size * .5, back: { color: props.color, alpha: props.alpha } });
+
+            props.y += props.rate; props.x += props.direction;
+
+        }, { y: 0, direction: 0, color: '#757577' });
+
+        new Pac('demo', function (me)
+        {
+            for (var i = 0; i < 30; i++)
+            {
+                me.load('dot', { color: '#29b6f6' });
+            }
+
+            me.play();
+
+        });
+
+    </script>
+</head>
+<body>
+    <img src="img/pac.me.png" alt="pac.me" />
+    <canvas id="demo" width="280" height="280"></canvas>
+</body>
+</html>
