@@ -1,4 +1,4 @@
-﻿Pac('stopper', function (props, me, delegate)
+﻿Pac('stopwatch', function (props, me, delegate)
 {
     function progress(section, value)
     {
@@ -36,7 +36,7 @@
 
     function draw(t, p)
     {
-        progress('hours', p);
+        progress('total', p);
         progress('minutes', t.mm + (t.ss + 0.01) * 0.017);
         progress('seconds', t.ss + t.ms * 0.000017);
     }
@@ -89,12 +89,12 @@
 
     colors:
     {
-        hours: '#2997f2', minutes: '#28d9ed', seconds: '#29b6f6', second: '#cecece',
+        total: '#2997f2', minutes: '#28d9ed', seconds: '#29b6f6', second: '#cecece',
 
         back: '#535355', digits: '#2a2a2a', digitsBack: '#efefef'
     },
 
-    hours:
+    total:
     {
         r: 160,
         border: { size: 40 },
