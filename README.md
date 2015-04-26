@@ -16,3 +16,26 @@ Chrome, Firefox, Saffari, IE (partially supported with exCanvas)
 * [bubbles](https://jsfiddle.net/fcohLqxw/embedded/result/)
 * [pacman](https://jsfiddle.net/y94ega12/embedded/result/)
 
+----
+
+##Basic usage:##
+```
+new Pac('id', function (me) // id => the id of the canvas element
+{
+    // your code here
+});
+```
+
+for instance:
+
+```
+new Pac('id', function (me) 
+{
+    me.draw.pie({ x: 10, y: 10, r: 50, back: { color: '#29b6f6', alpha: 0.8 } });
+});
+```
+
+
+
+
+
