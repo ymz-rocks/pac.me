@@ -1,4 +1,4 @@
-![](https://github.com/ymz-rocks/pac.me/blob/master/v1.0/img/pac.me.png)
+![](https://github.com/ymz-rocks/pac.me/blob/master/demos/img/pac.me.png)
 
 # pac.me
 html canvas javascript utility for simple &amp; fun animations
