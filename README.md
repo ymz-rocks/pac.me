@@ -1,4 +1,6 @@
-![](https://github.com/ymz-rocks/pac.me/blob/master/demos/img/pac.me.png)
+![project-poster][poster]
+
+[poster]:https://raw.githubusercontent.com/ymz-rocks/emblems/master/pac.me/logo.png "pac.me project"
 
 # pac.me
 html canvas javascript utility for simple &amp; fun animations
