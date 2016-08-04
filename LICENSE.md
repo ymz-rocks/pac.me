@@ -1,4 +1,6 @@
-![](https://github.com/ymz-rocks/pac.me/blob/master/demos/img/pac.me.png)
+![project-poster][poster]
+
+[poster]:https://raw.githubusercontent.com/ymz-rocks/emblems/master/pac.me/logo.png "pac.me project"
 
 pac.me project and related files are licensed under a Creative Commons Attribution 4.0 International License
 
